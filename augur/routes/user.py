@@ -7,7 +7,7 @@ from wtforms.validators import DataRequired
 from ..models import User
 
 
-
+#登录页面
 class LoginForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
     password = PasswordField('Password', validators=[DataRequired()])
@@ -15,7 +15,7 @@ class LoginForm(FlaskForm):
     submit = SubmitField('Sign In')
 
 
-
+#将登录信息提交到服务器
 def create_user_routes(server):
     @server.login.user_loader
     def load_user(id):
