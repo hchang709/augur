@@ -11,12 +11,12 @@ from os import path
 here = path.abspath(path.dirname(__file__)) #路径
 
 # Get global metadata
-exec(open("augur/metadata.py").read())
+exec(open("augur/metadata.py").read()) #代码运行版本号
 
 # Get the long description from the README file
 with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
-
+#系统提供安装的必要信息
 setup(
     name='augur',
     version=__version__,
