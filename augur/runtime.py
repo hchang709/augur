@@ -53,7 +53,7 @@ def run():
         action="store_true",
         help="Do not start the Gunicorn server, only run update threads.")
     args, unknown_args = app.arg_parser.parse_known_args()
-    logger.info('Loading...')
+    logger.info('Loading...') #HCH-user.py print
     # app.init_all()
     app.finalize_config()
     app.schedule_updates()
