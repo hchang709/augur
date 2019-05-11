@@ -1,4 +1,7 @@
 #SPDX-License-Identifier: MIT
+
+#HCH-consult the database
+
 """
 Data source that uses Facade's tables
 """
