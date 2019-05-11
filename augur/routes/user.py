@@ -19,14 +19,15 @@ class LoginForm(FlaskForm):
 def create_user_routes(server):
     @server.login.user_loader
     def load_user(id):
+        print('loading')  #HCH-submit logon information
         return User.query.get(int(id))
 
     @server.app.route(f'/{server.api_version}/login', methods=['GET', 'POST'])
     def login():
-        form = LoginForm()
+        form = LoginForm()  #HCH-UI&sever interaction
         nxt = request.args.get('next')
         if form.validate_on_submit():
             user = User()
             login_user(user)
-            flash('Logged in successfully.')
+            flash('Logged in successfully.')  #HCH-pop-up window
         return redirect(nxt or '/')
