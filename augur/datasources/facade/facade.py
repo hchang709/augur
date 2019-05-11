@@ -1,6 +1,7 @@
 #SPDX-License-Identifier: MIT
 
-#HCH-consult the database GHTorrent
+#HCH-consult the database GHTorrent 
+#Query the database change record (in a period)
 
 """
 Data source that uses Facade's tables
