@@ -17,15 +17,15 @@ class Repo(Base):
     __tablename__ = 'repo'
    
     # Keys
-    url = Column(String(1024), primary_key=True)
+    url = Column(String(1024), primary_key=True)  #rank name 'url'
     vcs = Column(String(64), primary_key=True, default='git')
-
+ 
     # Fields
     created_at = Column(DateTime, default=datetime.datetime.utcnow)
 
     # Foreign Keys
     repo_groups_member_of = relationship('RepoGroup', secondary=repo_group_has_project, back_populates='projects')
-
+    #test= Column(String(64), primary_key=True)  #HCH-add a rank in the database 'repo'
     def __repr__(self):
        return f"<User(giturl='{self.password}')>"
 
