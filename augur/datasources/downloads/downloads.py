@@ -68,6 +68,7 @@ class Downloads(object):
                 return self.npm_downloads(repo, contents)
 
     def ruby_downloads(self, repo):
+        print('Download options')  #HCH-ruby/npm
         """
         Timeseries of daily downloads for ruby gems from bestgems.org API
 
