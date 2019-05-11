@@ -137,11 +137,14 @@ class Application(object):
 
     @classmethod
     def register_plugin(cls, plugin):
+       
         """
         Registers specified plugin
 
         :param plugin: specified plugin to register
         """
+        
+        #print('welcome')  #HCH prepare for registering
         if 'name' not in plugin.augur_plugin_meta:
             raise NameError("{} didn't have a name")
         cls.plugins[plugin.augur_plugin_meta['name']] = plugin
