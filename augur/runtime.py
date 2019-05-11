@@ -53,7 +53,7 @@ def run():
         action="store_true",
         help="Do not start the Gunicorn server, only run update threads.")
     args, unknown_args = app.arg_parser.parse_known_args()
-    logger.info('Loading...') #HCH-user.py print
+    logger.info('Loading...') 
     # app.init_all()
     app.finalize_config()
     app.schedule_updates()
@@ -61,6 +61,7 @@ def run():
 
     @atexit.register
     def exit():
+        print('succeed in exiting')  #HCH
         if master is not None:
             master.halt()
         app.shutdown_updates()
